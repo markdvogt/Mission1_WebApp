@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Blah\gradeCalculator.cshtml" />
+    <Content Remove="wwwroot\js\Calculator.js" />
     <Content Remove="wwwroot\js\JavaScript.js" />
     <Content Remove="wwwroot\js\myWebsite.js" />
   </ItemGroup>

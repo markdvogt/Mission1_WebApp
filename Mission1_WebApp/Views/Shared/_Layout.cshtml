@@ -3,11 +3,53 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/Styles.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/css/bootstrap.css.map">
+    <link href="~/img/logo.PNG" rel="icon" type="image/png" />
+    <style>
+        nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: darkslategrey;
+            width: 230px;
+            border-radius: 10px;
+        }
+
+        a {
+            float: left;
+        }
+
+        a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: #111;
+        }
+    </style>
 </head>
 <body>
+
+    <nav>
+        <a asp-controller="Blah" asp-action="Index">Home</a>
+        <a asp-controller="Blah" asp-action="Calculate">Grade Calculator</a>
+    </nav>
+
     <div>
-        @RenderBody()
+        @RenderBody()   
     </div>
+
+    <script src="~/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/js/JavaScript1.js"></script>
+
 </body>
 </html>

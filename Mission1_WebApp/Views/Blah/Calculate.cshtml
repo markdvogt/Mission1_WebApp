@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Grade Calculator";
+}
+
+
+@model CalculatorModel;
+
+<h2>Final Grade Calculator</h2>
+<div class="form-center">
+    <form method="post">
+        <fieldset style="border-radius: 10px;">
+            <label for="assignments">Assignments</label>
+            <input type="number" id="assignments" asp-for="Assts"><br><br>
+            <label for="group_projects">Group Projects</label>
+            <input type="number" id="group_projects" asp-for="GroupProjects"><br><br>
+            <label for="quizzes">Quizzes</label>
+            <input type="number" id="quizzes" asp-for="Quiz"><br><br>
+            <label for="exams">Exams</label>
+            <input type="number" id="exams" asp-for="Exam"><br><br>
+            <label for="intex">Intex</label>
+            <input type="number" id="intex" asp-for="Intex"><br><br>
+            <div class="buttonHolder">
+                <input value="Calculate" type="submit" id="calculate">
+            </div>
+
+            <div asp-validation-summary="All"></div> <!--This line will make it so the data validation code will pop up and say something like "Field Required"-->
+
+        </fieldset>
+    </form>
+</div>
+
+<script src="~/js/JavaScript1.js"></script>
